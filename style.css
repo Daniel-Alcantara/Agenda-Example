@@ -1,140 +1,153 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 * {
-  font-family: "Josefin Sans", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 body {
-  background-color: #181824;
+    background-color: #181824;
 }
 
 .container_global_center {
-  width: 50%;
-  margin: 0px auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 50%;
+    margin: 0px auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo_header h1 {
-  letter-spacing: 20px;
-  color: white;
-  display: flex;
-  align-items: flex-start;
-  margin-top: 5rem;
+    letter-spacing: 20px;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 5rem;
 }
 
 .container_adicionar_tarefa {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .container_adicionar_tarefa input {
-  width: 500px;
-  padding: 1rem;
-  background-color: #25273c;
-  border: 0px;
-  margin-right: 1rem;
-  color: #afb1ca;
-  font-size: 20px;
+    width: 500px;
+    padding: 1rem;
+    background-color: #25273c;
+    border: 0px;
+    margin-right: 1rem;
+    color: #afb1ca;
+    font-size: 20px;
 }
 
 .container_adicionar_tarefa .send_tarefa {
-  margin-top: 10px;
-  cursor: pointer;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .box_tarefa_criada {
-  display: flex;
-  align-items: center;
-  position: relative;
-  color: #afb1ca;
-  font-size: 20px;
-  width: 600px;
-  border-bottom: 1px solid #36384d;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #afb1ca;
+    font-size: 20px;
+    width: 600px;
+    border-bottom: 1px solid #36384d;
 }
 
 .container {
-  display: block;
-  position: relative;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
 }
 
 /* Esconder o checkbox padrão */
 .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
 
 /* Criar o checkbox customizado */
 .checkmark {
-  position: absolute;
-  top: -8px;
-  left: 25px;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    left: 25px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
 }
 
 /* Adicionar uma cor de fundo cinza ao passar o mouse */
 .container:hover input~.checkmark {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
 /* Quando o checkbox é clicado, adicionar um fundo rosa */
 .container input:checked~.checkmark {
-  background-color: #9a8afb;
+    background-color: #9a8afb;
 }
 
 /* Criar o ícone de check, escondido quando não estiver selecionado */
 .container .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 /* Exibir o ícone quando selecionado */
 .container input:checked~.checkmark:after {
-  display: block;
+    display: block;
 }
 
 .texto_tarefa {
-  margin-left: 4rem;
+    margin-left: 4rem;
 }
 
 .container_tarefas_criadas {
-  margin-top: 4rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding-top: 1rem;
+    margin-top: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-top: 1rem;
 }
 
 .container_delete_item {
-  display: flex;
-  justify-content: space-between;
-  width: 65%;
-  color: #afb1ca;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    color: #afb1ca;
 }
 
 .delete_item_text p {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .tarefa_concluida p {
-  cursor: pointer;
+    cursor: pointer;
+}
+
+.tarefa_concluida p:hover {
+    color: white;
+}
+
+.delete_item_text p:hover {
+    color: white;
+}
+
+.send_tarefa svg:hover path{
+    stroke: white;
+
 }
